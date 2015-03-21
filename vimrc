@@ -24,6 +24,7 @@ Plugin 'Rename'
 
 " Colorscheme
 Plugin 'Skittles-Berry'
+Plugin 'molokai'
 
 " Fuzzy finder
 Plugin 'ctrlp.vim'
