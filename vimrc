@@ -122,6 +122,12 @@ nmap <C-a> ggvG$
 vmap <TAB> <S-i><C-t><ESC><S-^>
 vmap <S-TAB> <S-i><C-d><ESC><S-^>
 
+" RSpec.vim mappings
+map <leader>t :call RunCurrentSpecFile()<CR>
+map <leader>s :call RunNearestSpec()<CR>
+map <leader>l :call RunLastSpec()<CR>
+map <leader>a :call RunAllSpecs()<CR>
+
 map <C-n> :NERDTreeToggle<CR>
 
 " Close vim if the only window left open is a NERDTree
