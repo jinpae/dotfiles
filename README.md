@@ -12,7 +12,7 @@ After cloning, simply either copy or symlink the dotfiles (vimrc, gvimrc, etc.) 
     ln -s ~/.vim/vimrc ~/.vimrc (Mac/Linux)
     mklink "%homepath%\.vimrc" "%homepath%\vimfiles\vimrc" (Windows)
 
-_Note: If you are on Windows, I recommend using [Cmder](http://gooseberrycreative.com/cmder/), a console emulator that supports usefuly Unix commands, instead of the plain `cmd`._
+_Note: If you are on Windows, I recommend using [Cmder](http://gooseberrycreative.com/cmder/), a console emulator that supports useful Unix commands, instead of the plain `cmd`._
 
 # Install Vim Plugins via Vundle
 First, install [Vundle](https://github.com/gmarik/Vundle.vim) which is a vim plugin manager. To install Vundle, run the following command from a cmd or a terminal:
