@@ -3,8 +3,8 @@ set guifont=Powerline_Consolas:h11:cDEFAULT
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
-set lines=36
-set columns=84
+set lines=48
+set columns=124
 "set background=light
 
 set novisualbell

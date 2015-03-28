@@ -4,8 +4,8 @@ set nocompatible
 filetype off
 
 " Set the runtime path to include Vundle and initialize
-set rtp+=%userprofile%\vimfiles\bundle\Vundle.vim
-call vundle#begin('\Users\Jin Pae\vimfiles\bundle')
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
