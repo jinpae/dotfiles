@@ -4,8 +4,14 @@ set nocompatible
 filetype off
 
 " Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if has('win32') || has('win64')
+	set rtp+=$USERPROFILE\vimfiles\bundle\Vundle.vim
+	let s:path=escape($USERPROFILE . '\vimfiles\bundle', ' ')
+	call vundle#begin(s:path)
+else
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
+endif
 
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -128,6 +134,10 @@ map <leader>s :call RunNearestSpec()<CR>
 map <leader>l :call RunLastSpec()<CR>
 map <leader>a :call RunAllSpecs()<CR>
 
+" Insert line below current line
+imap <S-CR> <ESC>o
+
+" Toggle NerdTree sidebar
 map <C-n> :NERDTreeToggle<CR>
 
 " Close vim if the only window left open is a NERDTree
