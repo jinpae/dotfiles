@@ -41,6 +41,17 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'thoughtbot/vim-rspec'
 
+" SnipMate
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
+" Plugins to consider
+"EasyMotion
+"Sparkup
+"tComment
+
 call vundle#end()
 
 set term=xterm
@@ -68,6 +79,10 @@ set softtabstop=2
 set shiftwidth=2
 set wildmode=longest,list,full
 set wildmenu
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
 filetype plugin indent on
 syntax enable
