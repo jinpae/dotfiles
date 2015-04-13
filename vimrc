@@ -5,9 +5,9 @@ filetype off
 
 " Set the runtime path to include Vundle and initialize
 if has('win32') || has('win64')
-	set rtp+=$USERPROFILE\vimfiles\bundle\Vundle.vim
-	let s:path=escape($USERPROFILE . '\vimfiles\bundle', ' ')
-	call vundle#begin(s:path)
+	set rtp+=~/vimfiles/bundle/Vundle.vim/
+	let path='~/vimfiles/bundle'
+	call vundle#begin(path)
 else
 	set rtp+=~/.vim/bundle/Vundle.vim
 	call vundle#begin()
@@ -28,28 +28,38 @@ Plugin 'L9'
 " Lets rename current file on the disk
 Plugin 'Rename'
 
-" Colorscheme
+" Colorschemes
 Plugin 'Skittles-Berry'
 Plugin 'molokai'
 
 " Fuzzy finder
 Plugin 'ctrlp.vim'
 
+" Handy filesystem navigator
 Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-endwise'
+
+" Git wrapper
 Plugin 'tpope/vim-fugitive'
+
+" Ruby and Ruby on Rails plugins
+Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
 
-" SnipMate
+" Supports auto-closing certain structures like adding end after def in Ruby
+Plugin 'tpope/vim-endwise'
+
+" SnipMate related plugins
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 
+" The sparkup vim plugin is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
+
 " Plugins to consider
 "EasyMotion
-"Sparkup
 "tComment
 
 call vundle#end()
