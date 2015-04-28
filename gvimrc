@@ -1,5 +1,11 @@
 "set guifont=Consolas:h11:cDEFAULT
-set guifont=Powerline_Consolas:h11:cDEFAULT
+
+if has('win32') || has('win64')
+	set guifont=Powerline_Consolas:h11:cDEFAULT
+else
+	set guifont=Monaco:h12
+endif
+
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
