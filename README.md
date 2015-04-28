@@ -4,6 +4,8 @@ A set of vim configuration files
 # Usage
 Clone this repo into the home directory either as `.vim` (Mac/Linux) or `vimfiles` (Windows):
 
+_UPDATE: Haven't tested for myself yet, but it seems like `.vim` also works on Windows as well_
+
     git clone git://github.com/jinpae/dotfiles.git ~/.vim (Mac/Linux)
     git clone git://github.com/jinpae/dotfiles.git "%homepath%\vimfiles" (Windows)
 
@@ -12,7 +14,7 @@ After cloning, simply either copy or symlink the dotfiles (vimrc, gvimrc, etc.) 
     ln -s ~/.vim/vimrc ~/.vimrc (Mac/Linux)
     mklink "%homepath%\.vimrc" "%homepath%\vimfiles\vimrc" (Windows)
 
-_Note: If you are on Windows, I recommend using [Cmder](http://gooseberrycreative.com/cmder/), a console emulator that supports useful Unix commands, instead of the plain `cmd`._
+_Note: If you are on Windows, I recommend using a console emulator such as [Cmder](http://gooseberrycreative.com/cmder/) or [ConEmu](http://conemu.github.io/) that supports useful Unix commands instead of the plain `cmd`._
 
 # Install Vim Plugins via Vundle
 First, install [Vundle](https://github.com/gmarik/Vundle.vim) which is a vim plugin manager. To install Vundle, run the following command from a cmd or a terminal:
@@ -31,7 +33,7 @@ Once Vundle is installed, make sure your runtime path for Vundle is setup correc
     	call vundle#begin()
     endif
 
-If you cloned dotfiles depot into `~/.vim`, which I believe now works on PC's as well, you should be able to set your runtime path as follows and be good to go:
+If you cloned dotfiles depot into `~/.vim`, you should be good to go with the default path setup:
 
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
