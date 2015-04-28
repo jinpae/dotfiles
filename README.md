@@ -19,18 +19,24 @@ First, install [Vundle](https://github.com/gmarik/Vundle.vim) which is a vim plu
 
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-Once Vundle is installed, make sure your runtime path for Vundle is setup correcly in `.vimrc`. My runtime path should look something like this:
+Once Vundle is installed, make sure your runtime path for Vundle is setup correcly in `.vimrc` so that it knows where to find the plugins and load them. Depending on your operating system and how the environment is setup, you might want to change it to point to the right path. At the time of writing this document, my runtime path looks like this where it checks the operating system it's running on conditionally and sets the path accordingly:
 
     " Set the runtime path to include Vundle and initialize
-    set rtp+=%userprofile%\vimfiles\bundle\Vundle.vim
-    call vundle#begin('\Users\Jin Pae\vimfiles\bundle')
+    if has('win32') || has('win64')
+    	set rtp+=~/vimfiles/bundle/Vundle.vim/
+    	let path='~/vimfiles/bundle'
+    	call vundle#begin(path)
+    else
+    	set rtp+=~/.vim/bundle/Vundle.vim
+    	call vundle#begin()
+    endif
 
-Assuming you cloned dotfiles depot into `~/.vim`, you probably want to set your runtime path as follows:
+If you cloned dotfiles depot into `~/.vim`, which I believe now works on PC's as well, you should be able to set your runtime path as follows and be good to go:
 
     set rtp+=~/.vim/bundle/Vundle.vim
     call vundle#begin()
 
-When done setting up the runtime path, it's time to install plugins (a.k.a. bundles). To install plugins defined in the `.vimrc` file, simple open `.vimrc` file in vim and run `PluginInstall` command that came with Vundle.
+When done setting up the runtime path, it's time to install plugins (a.k.a. bundles). To install plugins defined in the `.vimrc` file, simply open the file in vim and run `PluginInstall` command that came with Vundle.
 
     :PluginInstall
 
