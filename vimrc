@@ -58,6 +58,9 @@ Plugin 'honza/vim-snippets'
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
 
+" CoffeeScript support for vim
+Plugin 'kchmck/vim-coffee-script'
+
 " Plugins to consider
 "EasyMotion
 "tComment
