@@ -6,8 +6,8 @@ Clone this repo into the home directory either as `.vim` (Mac/Linux) or `vimfile
 
 _UPDATE: Haven't tested for myself yet, but it seems like `.vim` also works on Windows as well_
 
-    git clone git://github.com/jinpae/dotfiles.git ~/.vim (Mac/Linux)
-    git clone git://github.com/jinpae/dotfiles.git "%homepath%\vimfiles" (Windows)
+    git clone git@github.com:jinpae/dotfiles.git ~/.vim (Mac/Linux)
+    git clone git@github.com:jinpae/dotfiles.git "%homepath%\vimfiles" (Windows)
 
 After cloning, simply either copy or symlink the dotfiles (vimrc, gvimrc, etc.) to the home directory:
 
