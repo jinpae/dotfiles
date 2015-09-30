@@ -95,7 +95,7 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-" Syntastic recommended settings
+" Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
