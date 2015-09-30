@@ -64,6 +64,7 @@ Plugin 'kchmck/vim-coffee-script'
 " PHP related plugins
 Plugin 'StanAngeloff/php.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'captbaritone/better-indent-support-for-php-with-html'
 
 " Plugins to consider
 "EasyMotion
