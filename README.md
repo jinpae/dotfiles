@@ -5,7 +5,8 @@ A set of vim configuration files
 Clone this repo into your home directory either as `.vim` (Mac/Linux) or `vimfiles` (Windows):
 
 ~~_UPDATE: Haven't tested for myself yet, but it seems like `.vim` also works on Windows as well_~~
-_UPDATE: Windows can also use .vim directory, but sparkup plugin didn't run successfully_
+
+_UPDATE: Windows can also use .vim directory, but sparkup plugin didn't run successfully_.
 
     git clone git@github.com:jinpae/dotfiles.git ~/.vim (Mac/Linux)
     git clone git@github.com:jinpae/dotfiles.git "%home%\vimfiles" (Windows)
