@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " Allows auto-complete
 Plugin 'ervandew/supertab'
@@ -55,6 +55,10 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
 " CoffeeScript support for vim
 Plugin 'kchmck/vim-coffee-script'
 
+" PHP related plugins
+Plugin 'StanAngeloff/php.vim'
+Plugin 'scrooloose/syntastic'
+
 " Plugins to consider
 "EasyMotion
 "tComment
@@ -90,6 +94,19 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+
+" Syntastic recommended settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_signs=1
+let g:syntastic_enable_balloons = 1
+let g:syntastic_php_checkers = ['php']
 
 filetype plugin indent on
 syntax enable
@@ -168,3 +185,17 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " Open a NERDTree automatically when vim starts if no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Highlight PHP @tags and $parameters in comments
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
+
+" Set different tab settings for different languages
+autocmd FileType php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
