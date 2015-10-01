@@ -66,6 +66,8 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 
+Plugin 'tpope/vim-commentary'
+
 " Plugins to consider
 "EasyMotion
 "tComment
@@ -90,6 +92,7 @@ set autoindent
 set smartindent
 set backspace=indent,eol,start
 set number
+set numberwidth=5
 set ruler
 set smarttab
 set tabstop=2
@@ -101,6 +104,7 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+set relativenumber
 
 " Syntastic settings
 set statusline+=%#warningmsg#
