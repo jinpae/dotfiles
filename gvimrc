@@ -17,4 +17,4 @@ set novisualbell
 set noerrorbells
 set nocursorline
 
-colorscheme molokai
+colorscheme gruvbox
