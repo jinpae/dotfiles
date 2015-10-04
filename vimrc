@@ -29,8 +29,9 @@ Plugin 'L9'
 Plugin 'Rename'
 
 " Colorschemes
-Plugin 'Skittles-Berry'
 Plugin 'molokai'
+Plugin 'morhetz/gruvbox'
+Plugin 'nanotech/jellybeans.vim'
 
 " Fuzzy finder
 Plugin 'ctrlp.vim'
@@ -66,11 +67,8 @@ Plugin 'StanAngeloff/php.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'captbaritone/better-indent-support-for-php-with-html'
 
-Plugin 'tpope/vim-commentary'
-
-" Plugins to consider
-"EasyMotion
-"tComment
+Plugin 'tomtom/tcomment_vim'
+" Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 
@@ -79,7 +77,8 @@ set t_Co=256
 let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
 
-colorscheme skittles_berry
+colorscheme gruvbox
+set background=dark
 "let g:solarized_termcolors=256
 
 set encoding=utf-8
