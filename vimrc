@@ -214,3 +214,4 @@ augroup END
 
 " Set different tab settings for different languages
 autocmd FileType php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
