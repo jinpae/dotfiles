@@ -63,6 +63,11 @@ Plugin 'honza/vim-snippets'
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
 
+" JavaScript related plugins
+Plugin 'pangloss/vim-javascript'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'nicklasos/vim-jsx-riot'
+
 " CoffeeScript support for vim
 Plugin 'kchmck/vim-coffee-script'
 
@@ -109,6 +114,7 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 set relativenumber
+set omnifunc=syntaxcomplete#Complete
 
 " Syntastic settings
 set statusline+=%#warningmsg#
@@ -122,6 +128,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_signs=1
 let g:syntastic_enable_balloons = 1
 let g:syntastic_php_checkers = ['php']
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
 
 filetype plugin indent on
 syntax enable
@@ -215,3 +223,5 @@ augroup END
 " Set different tab settings for different languages
 autocmd FileType php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+
+au BufNewFile,BufRead *.tag setlocal ft=javascript
