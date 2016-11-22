@@ -67,6 +67,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
 Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'nicklasos/vim-jsx-riot'
+Plugin 'vim-scripts/JavaScript-Indent'
 
 " CoffeeScript support for vim
 Plugin 'kchmck/vim-coffee-script'
