@@ -4,7 +4,7 @@ set nocompatible
 filetype off
 
 " Set the runtime path to include Vundle and initialize
-if has('win32') || has('win64')
+if has('win32') || has('win64') || has('windows')
 	set rtp+=~/vimfiles/bundle/Vundle.vim/
 	let path='~/vimfiles/bundle'
 	call vundle#begin(path)

@@ -1,7 +1,7 @@
 "set guifont=Consolas:h11:cDEFAULT
 
 if has('win32') || has('win64')
-  set guifont=Consolass_for_Powerline_FixedD:h11:cANSI
+  set guifont=Consolas_for_Powerline_FixedD:h11:cANSI
 else
   set guifont=Monaco:h12
 endif
