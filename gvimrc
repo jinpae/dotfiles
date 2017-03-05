@@ -1,5 +1,3 @@
-"set guifont=Consolas:h11:cDEFAULT
-
 if has('win32') || has('win64')
   set guifont=Consolas_for_Powerline_FixedD:h11:cANSI
 else

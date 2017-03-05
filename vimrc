@@ -1,23 +1,18 @@
-"execute pathogen#infect()
-
 set nocompatible
 filetype off
 
 " Set the runtime path to include Vundle and initialize
-if has('win32') || has('win64') || has('windows')
+if has('win32') || has('win64')
 	set rtp+=~/vimfiles/bundle/Vundle.vim/
 	let path='~/vimfiles/bundle'
 	call vundle#begin(path)
 else
-	set rtp+=~/.vim/bundle/Vundle.vim
+	set rtp+=$HOME/.vim/bundle/Vundle.vim
 	call vundle#begin()
 endif
 
 " Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" Allows auto-complete
-"Plugin 'ervandew/supertab'
 
 " Allows easy way to surround texts with parentheses, brackets, quotes, etc.
 Plugin 'surround.vim'
@@ -29,7 +24,7 @@ Plugin 'L9'
 Plugin 'Rename'
 
 " Colorschemes
-Plugin 'molokai'
+Plugin 'crusoexia/vim-monokai'
 Plugin 'morhetz/gruvbox'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'junegunn/seoul256.vim'
@@ -53,32 +48,23 @@ Plugin 'thoughtbot/vim-rspec'
 " Supports auto-closing certain structures like adding end after def in Ruby
 Plugin 'tpope/vim-endwise'
 
-" SnipMate related plugins
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-
 " The sparkup vim plugin is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
 
-" JavaScript related plugins
+" Web development related plugins
 Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'nicklasos/vim-jsx-riot'
 Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'alvan/vim-closetag'
+Plugin 'tmhedberg/matchit'
 
-" CoffeeScript support for vim
-Plugin 'kchmck/vim-coffee-script'
-
-" PHP related plugins
-Plugin 'StanAngeloff/php.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'captbaritone/better-indent-support-for-php-with-html'
+Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'tomtom/tcomment_vim'
-" Plugin 'tpope/vim-commentary'
+
+Plugin 'Lokaltog/vim-powerline'
 
 call vundle#end()
 
@@ -116,27 +102,17 @@ set nofoldenable
 set foldlevel=2
 set relativenumber
 set omnifunc=syntaxcomplete#Complete
+set clipboard=unnamed
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_enable_signs=1
-let g:syntastic_enable_balloons = 1
-let g:syntastic_php_checkers = ['php']
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
+let g:javascript_plugin_jsdoc=1
 
 filetype plugin indent on
 syntax enable
 
-"set laststatus=2
-"let g:Powerline_symbols='fancy'
+set laststatus=2
+" let g:Powerline_symbols='fancy'
 
 " Set mapleader to , instead of \
 "let mapleader=","
@@ -210,19 +186,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Highlight PHP @tags and $parameters in comments
-function! PhpSyntaxOverride()
-  hi! def link phpDocTags  phpDefine
-  hi! def link phpDocParam phpType
-endfunction
-
-augroup phpSyntaxOverride
-  autocmd!
-  autocmd FileType php call PhpSyntaxOverride()
-augroup END
-
 " Set different tab settings for different languages
 autocmd FileType php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 au BufNewFile,BufRead *.tag setlocal ft=javascript
+
