@@ -48,8 +48,8 @@ let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
 
 colorscheme seoul256
-"set background=dark
-"let g:solarized_termcolors=256
+" set background=dark
+" let g:solarized_termcolors=256
 
 set encoding=utf-8
 set history=1000
