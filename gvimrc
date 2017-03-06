@@ -7,6 +7,7 @@ endif
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
+set guioptions-=L
 set lines=46
 set columns=110
 
