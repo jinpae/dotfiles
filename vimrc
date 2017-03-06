@@ -79,8 +79,7 @@ set omnifunc=syntaxcomplete#Complete
 set clipboard=unnamed
 
 let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
-let g:javascript_plugin_jsdoc=1
+let g:tern_show_argument_hints=0
 
 filetype plugin indent on
 syntax enable
