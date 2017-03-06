@@ -11,60 +11,34 @@ else
 	call vundle#begin()
 endif
 
-" Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-" Allows easy way to surround texts with parentheses, brackets, quotes, etc.
-Plugin 'surround.vim'
-
-" Provides utility functions and commands for programming in Vim
 Plugin 'L9'
-
-" Lets rename current file on the disk
 Plugin 'Rename'
-
-" Colorschemes
-Plugin 'crusoexia/vim-monokai'
-Plugin 'morhetz/gruvbox'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'junegunn/seoul256.vim'
-
-" Distraction-free writing in Vim
-Plugin 'junegunn/goyo.vim'
-
-" Fuzzy finder
+Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
 Plugin 'ctrlp.vim'
-
-" Handy filesystem navigator
+Plugin 'surround.vim'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 
-" Git wrapper
-Plugin 'tpope/vim-fugitive'
-
-" Ruby and Ruby on Rails plugins
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
-
-" Supports auto-closing certain structures like adding end after def in Ruby
 Plugin 'tpope/vim-endwise'
 
-" The sparkup vim plugin is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
-
-" Web development related plugins
 Plugin 'pangloss/vim-javascript'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'nicklasos/vim-jsx-riot'
 Plugin 'vim-scripts/JavaScript-Indent'
+Plugin 'nicklasos/vim-jsx-riot'
 Plugin 'alvan/vim-closetag'
 Plugin 'tmhedberg/matchit'
+Plugin 'ternjs/tern_for_vim'
+Plugin 'Valloric/YouCompleteMe'
 
-Plugin 'jiangmiao/auto-pairs'
-
-Plugin 'tomtom/tcomment_vim'
-
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'morhetz/gruvbox'
+Plugin 'junegunn/seoul256.vim'
 
 call vundle#end()
 
@@ -73,8 +47,8 @@ set t_Co=256
 let &t_AB="\e[48;5;%dm"
 let &t_AF="\e[38;5;%dm"
 
-colorscheme gruvbox
-set background=dark
+colorscheme seoul256
+"set background=dark
 "let g:solarized_termcolors=256
 
 set encoding=utf-8
@@ -191,4 +165,3 @@ autocmd FileType php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 au BufNewFile,BufRead *.tag setlocal ft=javascript
-
