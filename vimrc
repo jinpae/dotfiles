@@ -80,6 +80,7 @@ set clipboard=unnamed
 
 let g:tern_map_keys=1
 let g:tern_show_argument_hints=0
+let g:closetag_filenames="*.html,*.js,*.jsx,*.js6,*.tag"
 
 filetype plugin indent on
 syntax enable
@@ -163,4 +164,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd FileType php setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
-au BufNewFile,BufRead *.tag setlocal ft=javascript
+au BufRead,BufNewFile *.tag set ft=javascript
+au BufRead,BufNewFile *.js6 set ft=javascript
+au FileType javascript runtime! ftplugin/html/sparkup.vim
