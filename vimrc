@@ -114,8 +114,10 @@ nmap <C-Tab> :tabnext<CR>
 nmap <C-S-Tab> :tabprevious<CR>
 
 " Line movement
-nmap <A-j> ddp
-nmap <A-k> ddkP
+nnoremap <A-j> ddp
+nnoremap <A-k> ddkP
+nnoremap ∆ ddp
+nnoremap ˚ ddkP
 
 " Pair helpers
 imap <leader>' ''<ESC>i
@@ -127,6 +129,9 @@ imap <leader>< <><ESC>i
 
 nmap <C-CR> o<ESC>
 nmap <C-S-CR> O<ESC>
+
+nnoremap <C-e> 10<C-e>
+nnoremap <C-y> 10<C-y>
 
 " Run current Ruby file
 nmap <leader>rr :!ruby<Space>%<CR>
