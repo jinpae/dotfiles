@@ -13,7 +13,6 @@ endif
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
-Plugin 'Rename'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim'}
 Plugin 'ctrlp.vim'
 Plugin 'surround.vim'
@@ -23,6 +22,7 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-sleuth'
 
 Plugin 'tpope/vim-rails'
 Plugin 'thoughtbot/vim-rspec'
@@ -132,6 +132,9 @@ nmap <C-S-CR> O<ESC>
 
 nnoremap <C-e> 10<C-e>
 nnoremap <C-y> 10<C-y>
+
+nnoremap + :resize +5<CR>
+nnoremap - :resize -5<CR>
 
 " Run current Ruby file
 nmap <leader>rr :!ruby<Space>%<CR>
