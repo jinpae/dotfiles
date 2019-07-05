@@ -14,5 +14,29 @@
     "key": "ctrl+e",
     "command": "editor.emmet.action.expandAbbreviation",
     "when": "editorTextFocus && vim.active && vim.use<C-e> && !inDebugRepl && vim.mode == 'Insert'"
+  },
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "cmd+shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "workbench.action.terminal.focusPrevious"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "list.select",
+    "when": "explorerViewletFocus"
   }
 ]
+
