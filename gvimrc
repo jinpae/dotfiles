@@ -1,19 +1,17 @@
-if has('win32') || has('win64')
-  set guifont=Consolas_for_Powerline_FixedD:h11:cANSI
-else
-  set guifont=Monaco:h12
-endif
-
+set guifont=DankMono-Regular:h16
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
-set lines=46
-set columns=110
-
+set columns=100
+set lines=30
 set novisualbell
 set noerrorbells
 set nocursorline
 
-colorscheme gruvbox
-set background=dark
+" For Oceanic Next theme
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+colorscheme OceanicNext
