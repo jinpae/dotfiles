@@ -25,6 +25,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'haishanh/night-owl.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/seoul256.vim'
@@ -37,4 +38,4 @@ nmap <C-CR> o<Esc>
 nmap <C-S-CR> O<Esc>
 nmap <C-a> ggvG$
 
-colorscheme seoul256
+colorscheme night-owl

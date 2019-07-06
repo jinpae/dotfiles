@@ -14,4 +14,4 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-colorscheme OceanicNext
+colorscheme night-owl
