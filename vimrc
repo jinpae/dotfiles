@@ -51,8 +51,8 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Move between ALE warnings and errors
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <leader>j <Plug>(ale_previous_wrap)
+nmap <silent> <leader>k <Plug>(ale_next_wrap)
 
 " Allow JSX in .js files
 let g:jsx_ext_required = 0
