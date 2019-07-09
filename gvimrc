@@ -3,8 +3,8 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
-set columns=120
-set lines=36
+set columns=96
+set lines=40
 set novisualbell
 set noerrorbells
 set nocursorline
