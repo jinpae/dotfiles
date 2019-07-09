@@ -1,6 +1,8 @@
 {
+  "breadcrumbs.enabled": false,
   "editor.cursorWidth": 1,
-  "editor.fontFamily": "'Dank Mono', Inconsolata-Regular, 'Ubuntu Mono', Monaco, Menlo, 'Courier New', monospace",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'Dank Mono', Monaco, Menlo, 'Courier New', monospace",
   "editor.fontSize": 17,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
@@ -30,15 +32,12 @@
   "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Night Owl",
   "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.list.automaticKeyboardNavigation": false,
   "workbench.settings.editor": "json",
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": false,
   "vim.hlsearch": true,
   "vim.useCtrlKeys": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
-
