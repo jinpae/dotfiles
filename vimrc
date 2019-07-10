@@ -2,7 +2,6 @@ filetype plugin indent on
 
 syntax enable
 
-set backspace=indent,eol,start
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -14,6 +13,7 @@ set relativenumber
 set cursorline
 set incsearch
 set hlsearch
+set backspace=indent,eol,start
 set signcolumn=yes
 
 " Install Vim Plug, a vim plugin manager, if not found
@@ -27,16 +27,15 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'haishanh/night-owl.vim'
 Plug 'mhartington/oceanic-next'
-Plug 'junegunn/seoul256.vim'
-Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
-Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-surround'
 Plug 'mxw/vim-jsx'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'w0rp/ale'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
@@ -47,6 +46,11 @@ nmap <C-CR> o<Esc>
 nmap <C-S-CR> O<Esc>
 nmap <C-a> ggvG$
 
+" Move between ALE warnings and errors
+nmap <silent> <C-x>j <Plug>(ale_previous_wrap)
+nmap <silent> <C-x>k <Plug>(ale_next_wrap)
+
+" Move lines and preserve indentation
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
@@ -58,9 +62,8 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 nnoremap <C-p> :Files<CR>
 nnoremap <S-f> :Rg<CR>
 
-" Move between ALE warnings and errors
-nmap <silent> <leader>j <Plug>(ale_previous_wrap)
-nmap <silent> <leader>k <Plug>(ale_next_wrap)
+" Toggle explore panel
+nnoremap <C-n> :Lexplore<CR>
 
 " Netrw
 let g:netrw_banner = 0
