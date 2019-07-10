@@ -42,21 +42,23 @@ Plug 'prettier/vim-prettier', {
 
 call plug#end()
 
+if !has('gui_running')
+  " Move between ALE warnings and errors
+  nmap <silent> <C-x>j <Plug>(ale_previous_wrap)
+  nmap <silent> <C-x>k <Plug>(ale_next_wrap)
+
+  " Move lines and preserve indentation
+  nnoremap <C-j> :m .+1<CR>==
+  nnoremap <C-k> :m .-2<CR>==
+  inoremap <C-j> <Esc>:m .+1<CR>==gi
+  inoremap <C-k> <Esc>:m .-2<CR>==gi
+  vnoremap <C-j> :m '>+1<CR>gv=gv
+  vnoremap <C-k> :m '<-2<CR>gv=gv
+endif
+
 nmap <C-CR> o<Esc>
 nmap <C-S-CR> O<Esc>
 nmap <C-a> ggvG$
-
-" Move between ALE warnings and errors
-nmap <silent> <C-x>j <Plug>(ale_previous_wrap)
-nmap <silent> <C-x>k <Plug>(ale_next_wrap)
-
-" Move lines and preserve indentation
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Fuzzy finding files and contents
 nnoremap <C-p> :Files<CR>
