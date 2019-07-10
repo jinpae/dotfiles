@@ -24,19 +24,23 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+
+Plug 'haishanh/night-owl.vim'
+Plug 'mhartington/oceanic-next'
+Plug 'junegunn/seoul256.vim'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'junegunn/seoul256.vim'
-Plug 'mhartington/oceanic-next'
-Plug 'haishanh/night-owl.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+
 call plug#end()
 
 nmap <C-CR> o<Esc>
@@ -50,9 +54,18 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+" Fuzzy finding files and contents
+nnoremap <C-p> :Files<CR>
+nnoremap <S-f> :Rg<CR>
+
 " Move between ALE warnings and errors
 nmap <silent> <leader>j <Plug>(ale_previous_wrap)
 nmap <silent> <leader>k <Plug>(ale_next_wrap)
+
+" Netrw
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 25
 
 " Allow JSX in .js files
 let g:jsx_ext_required = 0
