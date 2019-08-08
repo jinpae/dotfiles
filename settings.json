@@ -38,6 +38,5 @@
   "workbench.startupEditor": "none",
   "workbench.statusBar.visible": false,
   "vim.hlsearch": true,
-  "vim.useCtrlKeys": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vim.useCtrlKeys": true
 }
