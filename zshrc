@@ -5,8 +5,6 @@ alias ll='ls -lahG'
 
 autoload -Uz vcs_info
 autoload -Uz compinit && compinit
-# autoload -U promptinit; promptinit
-# prompt pure
 
 precmd () { vcs_info }
 
