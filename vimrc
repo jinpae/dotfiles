@@ -15,6 +15,7 @@ set incsearch
 set hlsearch
 set backspace=indent,eol,start
 set signcolumn=yes
+set linebreak
 
 " Install Vim Plug, a vim plugin manager, if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -32,8 +33,6 @@ Plug 'tpope/vim-surround'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'prettier/vim-prettier', {
